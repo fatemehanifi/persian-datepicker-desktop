@@ -66,7 +66,7 @@ const SelectMonthModal = ({
         <Modal onClose={onClose}>
             <div className="flex w-full items-center justify-between p-4">
                 <div
-                    className="flex cursor-pointer items-center justify-center rounded-6 border border-neutrall-100 p-2"
+                    className="flex cursor-pointer items-center justify-center rounded-lg border border-neutral-200 p-2"
                     onClick={handlePrevYear}
                 >
                     <Image
@@ -78,7 +78,7 @@ const SelectMonthModal = ({
                     />
                 </div>
                 <div
-                    className="flex cursor-pointer items-center justify-between gap-2 text-base font-medium text-neutrall-900"
+                    className="flex cursor-pointer items-center justify-between gap-2 text-base font-medium text-neutral-900"
                     onClick={selectYear}
                 >
                     <div>{date.year()}</div>
@@ -91,7 +91,7 @@ const SelectMonthModal = ({
                     />
                 </div>
                 <div
-                    className="flex cursor-pointer items-center justify-center rounded-6 border border-neutrall-100 p-2"
+                    className="flex cursor-pointer items-center justify-center rounded-lg border border-neutral-200 p-2"
                     onClick={handleNextYear}
                 >
                     <Image
@@ -99,17 +99,17 @@ const SelectMonthModal = ({
                         alt="chevron"
                         width={18}
                         height={18}
-                        className="h-[18px] w-[18px]"
+                        className="h-[18px] w-[18px] rotate-180"
                     />
                 </div>
             </div>
             <Divider dash={false} />
             <div className="flex w-full flex-col items-center justify-center p-4">
-                <div className="grid w-full grid-cols-3 gap-2 text-center text-base font-normal text-neutrall-900">
+                <div className="grid w-full grid-cols-3 gap-2 text-center text-base font-normal text-neutral-900">
                     {monthNames.map((item, index) => (
                         <div
                             key={index}
-                            className={`col-span-1 flex h-[60px] cursor-pointer items-center justify-center ${month === index && "rounded-10 bg-primary-500 text-white"}`}
+                            className={`col-span-1 flex h-[60px] cursor-pointer items-center justify-center ${month === index && "rounded-lg bg-[#1f6be0] text-white"}`}
                             onClick={() => handleMonthClick(index)}
                         >
                             {item}
@@ -119,7 +119,7 @@ const SelectMonthModal = ({
             </div>
             <Divider dash={false} />
             <div className="grid w-full grid-cols-2 gap-8 p-4">
-                <div className="col-span-1 flex items-center justify-center rounded-6 border border-neutrall-100 px-4 py-2 text-sm font-medium text-neutrall-900">
+                <div className="col-span-1 flex items-center justify-center rounded-lg border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-900">
                     {date.format("YYYY/MM/DD")}
                 </div>
                 <div className="col-span-1">

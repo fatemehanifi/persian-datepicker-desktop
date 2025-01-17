@@ -125,7 +125,7 @@ const SelectDayModal = ({
         <Modal onClose={onClose}>
             <div className="flex w-full items-center justify-between p-4">
                 <div
-                    className="flex cursor-pointer items-center justify-center rounded-6 border border-neutrall-100 p-2"
+                    className="flex cursor-pointer items-center justify-center rounded-lg border border-neutral-200 p-2"
                     onClick={handlePrevMonth}
                 >
                     <Image
@@ -137,7 +137,7 @@ const SelectDayModal = ({
                     />
                 </div>
                 <div
-                    className="flex cursor-pointer items-center justify-between gap-2 text-base font-medium text-neutrall-900"
+                    className="flex cursor-pointer items-center justify-between gap-2 text-base font-medium text-neutral-900"
                     onClick={selectMonth}
                 >
                     <div>
@@ -152,7 +152,7 @@ const SelectDayModal = ({
                     />
                 </div>
                 <div
-                    className="flex cursor-pointer items-center justify-center rounded-6 border border-neutrall-100 p-2"
+                    className="flex cursor-pointer items-center justify-center rounded-lg border border-neutral-200 p-2"
                     onClick={handleNextMonth}
                 >
                     <Image
@@ -160,13 +160,13 @@ const SelectDayModal = ({
                         alt="chevron"
                         width={18}
                         height={18}
-                        className="h-[18px] w-[18px]"
+                        className="h-[18px] w-[18px] rotate-180"
                     />
                 </div>
             </div>
             <Divider dash={false} />
             <div className="flex w-full flex-col items-center justify-center p-4">
-                <div className="grid w-full grid-cols-7 gap-2 text-center text-xs font-medium text-neutrall-500">
+                <div className="grid w-full grid-cols-7 gap-2 text-center text-xs font-medium text-neutral-500">
                     {calendarType === "jalali"
                         ? ["ش", "ی", "د", "س", "چ", "پ", "ج"].map((day, idx) => (
                             <div
@@ -188,12 +188,15 @@ const SelectDayModal = ({
                 {getWeeksInMonth(date).map((week, index) => (
                     <div
                         key={index}
-                        className="grid w-full grid-cols-7 gap-2 text-center text-base font-normal text-neutrall-900"
+                        className="grid w-full grid-cols-7 gap-2 text-center text-base font-normal text-neutral-900"
                     >
                         {week.map((dayObj, dayIndex) => (
                             <div
                                 key={dayIndex}
-                                className={`col-span-1 flex h-10 items-center justify-center ${dayObj.currentMonth ? "cursor-pointer" : "cursor-not-allowed text-neutrall-100"} ${selectedDate && dayObj.currentMonth && selectedDate.date() === dayObj.day ? "rounded-10 bg-primary-500 text-white" : ""}`}
+                                className={`col-span-1 flex h-10 items-center justify-center 
+                                                ${dayObj.currentMonth ? "cursor-pointer" : "cursor-not-allowed text-neutral-200"} 
+                                                ${selectedDate && dayObj.currentMonth && selectedDate.date() === dayObj.day ? "rounded-lg bg-[#1f6be0] text-white" : ""}
+                                            `}
                                 onClick={() => handleDayClick(dayObj.day, dayObj.currentMonth)}
                             >
                                 {dayObj.day}
@@ -204,7 +207,7 @@ const SelectDayModal = ({
             </div>
             <Divider dash={false} />
             <div className="grid w-full grid-cols-2 gap-8 p-4">
-                <div className="col-span-1 flex items-center justify-center rounded-6 border border-neutrall-100 px-4 py-2 text-sm font-medium text-neutrall-900">
+                <div className="col-span-1 flex items-center justify-center rounded-lg border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-900">
                     {date.format("YYYY/MM/DD")}
                 </div>
                 <div className="col-span-1">
