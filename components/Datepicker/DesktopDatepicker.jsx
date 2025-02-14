@@ -26,7 +26,7 @@ const DesktopDatepicker = ({
                 value={date.format("YYYY/MM/DD")}
                 onChange={() => {}}
                 onClick={() => setSelectDay(true)}
-                className="w-full rounded-5 border border-neutrall-200 p-4 text-neutrall-900 transition duration-300 hover:border-neutrall-400 focus:outline-none disabled:border-neutrall-50 disabled:bg-primary-50 disabled:text-neutrall-200 disabled:placeholder:text-neutrall-200"
+                className="w-full rounded-lg border border-neutral-200 p-4 text-neutrall-900 transition duration-300 hover:border-neutral-400 focus:outline-none disabled:border-neutral-50 disabled:bg-primary-50 disabled:text-neutrall-200 disabled:placeholder:text-neutrall-200"
             />
             {selectDay && (
                 <SelectDayModal

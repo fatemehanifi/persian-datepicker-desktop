@@ -8,7 +8,10 @@ export default function Home() {
   const [birthDate, setBirthDate] = useState(moment().locale("fa"));
 
   return (
-    <div id={"modal-root"} className="w-full h-svh flex justify-start items-center p-4">
+    <div
+        id="modal-root"
+        className="w-1/2 h-svh p-4"
+    >
       <DesktopDatepicker
           disabled={false}
           title={"تاریخ"}

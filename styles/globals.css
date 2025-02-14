@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Vazir';
+  src: url('/fonts/vazir.ttf');
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -23,10 +28,10 @@
   background: #7d7f7b;
 }
 
-
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   direction: rtl;
+  font-family: "Vazir", "sans-serif";
 }
