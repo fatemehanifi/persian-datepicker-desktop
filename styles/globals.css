@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Vazir';
-  src: url('/fonts/vazir.ttf');
+  font-family: 'IRANSans';
+  src: url('/fonts/IRANSansXFaNum.woff2');
 }
 
 ::-webkit-scrollbar {
@@ -33,5 +33,5 @@ body {
   padding: 0;
   box-sizing: border-box;
   direction: rtl;
-  font-family: "Vazir", "sans-serif";
+  font-family: "IRANSans", "sans-serif";
 }

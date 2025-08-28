@@ -78,7 +78,7 @@ const SelectMonthModal = ({
                     />
                 </div>
                 <div
-                    className="flex cursor-pointer items-center justify-between gap-2 text-base font-medium text-neutral-900"
+                    className="flex cursor-pointer items-center justify-between gap-2 text-sm font-medium text-neutral-900"
                     onClick={selectYear}
                 >
                     <div>{date.year()}</div>
@@ -105,7 +105,7 @@ const SelectMonthModal = ({
             </div>
             <Divider dash={false} />
             <div className="flex w-full flex-col items-center justify-center p-4">
-                <div className="grid w-full grid-cols-3 gap-2 text-center text-base font-normal text-neutral-900">
+                <div className="grid w-full grid-cols-3 gap-2 text-center text-sm font-normal text-neutral-900">
                     {monthNames.map((item, index) => (
                         <div
                             key={index}

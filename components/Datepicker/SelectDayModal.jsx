@@ -137,7 +137,7 @@ const SelectDayModal = ({
                     />
                 </div>
                 <div
-                    className="flex cursor-pointer items-center justify-between gap-2 text-base font-medium text-neutral-900"
+                    className="flex cursor-pointer items-center justify-between gap-2 text-sm font-medium text-neutral-900"
                     onClick={selectMonth}
                 >
                     <div>
@@ -188,7 +188,7 @@ const SelectDayModal = ({
                 {getWeeksInMonth(date).map((week, index) => (
                     <div
                         key={index}
-                        className="grid w-full grid-cols-7 gap-2 text-center text-base font-normal text-neutral-900"
+                        className="grid w-full grid-cols-7 gap-2 text-center text-sm font-normal text-neutral-900"
                     >
                         {week.map((dayObj, dayIndex) => (
                             <div

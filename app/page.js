@@ -17,7 +17,7 @@ export default function Home() {
           title={"تاریخ"}
           date={birthDate}
           setDate={setBirthDate}
-          calendarType={"jalali"}
+          calendarType={"gregorian"}
       />
     </div>
   );

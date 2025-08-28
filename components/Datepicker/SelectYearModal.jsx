@@ -36,12 +36,12 @@ const SelectYearModal = ({
 
     return (
         <Modal onClose={onClose}>
-            <div className="flex cursor-pointer items-center justify-center gap-2 p-4 text-base font-medium text-neutral-900">
+            <div className="flex cursor-pointer items-center justify-center gap-2 p-4 text-sm font-medium text-neutral-900">
                 <div>انتخاب سال</div>
             </div>
             <Divider dash={false} />
             <div className="flex w-full flex-col items-center justify-center p-2">
-                <div className="grid max-h-[275px] w-full grid-cols-3 gap-2 overflow-y-auto px-2 text-center text-base font-normal text-neutral-900">
+                <div className="grid max-h-[275px] w-full grid-cols-3 gap-2 overflow-y-auto px-2 text-center text-sm font-normal text-neutral-900">
                     {years.map((item, index) => (
                         <div
                             key={index}
